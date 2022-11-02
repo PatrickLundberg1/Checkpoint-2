@@ -1,10 +1,8 @@
 ﻿
 using Checkpoint2;
 
-//##Level 3
+//##Level 4
 
-// Create Product_Table and Product classes
-// Product_Table class should handle the logic for storing and displaying Product objects
 Product_Table PT = new Product_Table();
 bool result_status;
 
@@ -25,7 +23,7 @@ while (true)
         while (true)
         {
             Console.ForegroundColor = ConsoleColor.Blue;
-            Console.WriteLine("To enter a new product - enter: \"P\" | To quit - enter: \"Q\"");
+            Console.WriteLine("To enter a new product - enter: \"P\" | To search for a product - enter: \"S\" | To quit - enter: \"Q\"");
             Console.ResetColor();
             command = (Console.ReadLine() ?? "").Trim().ToLower();
 
@@ -36,6 +34,12 @@ while (true)
             }else if(command == "p")
             {
                 if (!PT.Add_Product("Q"))
+                {
+                    return;
+                }
+            }else if(command == "s")
+            {
+                if (!PT.Search("Q"))
                 {
                     return;
                 }

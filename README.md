@@ -1,1 +1,1 @@
-# Weekly-Mini-Projects
+# Weekly Mini Project 2
